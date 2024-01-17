@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 m_Movement;
     private Animator m_Animator;
-    private Rigidbody
+    private Rigidbody m_Rigidbody;
 
 
     // Start is called before the first frame update
