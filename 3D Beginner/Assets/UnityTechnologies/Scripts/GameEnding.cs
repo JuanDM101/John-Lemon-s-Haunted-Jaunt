@@ -6,6 +6,8 @@ public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
 
+    public float displayImageDuration = 1f;
+
     public GameObject player;
 
     public CanvasGroup exitBackgroundImageCanvasGroup;
@@ -33,6 +35,11 @@ public class GameEnding : MonoBehaviour
     void EndLevel()
     {
         m_Timer += Time.deltaTime;
-        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration; 
+        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+
+        if(m_Timer > fadeDuration + displayImageDuration)
+        {
+            Application.Quit ();
+        }
     }
 }
